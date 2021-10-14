@@ -1,0 +1,60 @@
+body{
+    background-color: lightblue;
+}
+#underline{
+    text-decoration: underline;
+    padding-left: 65px;
+}
+#underline2{
+    text-decoration: underline;
+    margin-left: 100px;
+
+}
+#center{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    margin-top: 15%;
+}
+#center2{
+    padding-left: 35px;
+    margin: auto;
+    
+}
+#border{
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+#area{
+    float: left;
+    color: azure;
+    padding: 20px;
+    margin-left: 80px;
+    background-color: rgb(76, 136, 136);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#area2{
+    float: right;
+    color: azure;
+    padding: 20px;
+    margin-right: 120px;
+    background-color: rgb(76, 136, 136);
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 332px;
+    width: 192px;
+}
+#border2{
+    margin: auto;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+#cabins div {
+    border: 2px salmon solid;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 5px;
+}

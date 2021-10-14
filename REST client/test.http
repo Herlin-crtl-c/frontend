@@ -1,0 +1,31 @@
+@remoteUrl = https://secret-shelf-13108.herokuapp.com
+
+@localUrl = http://127.0.0.1:3000
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTY0MjQ3ZDRkY2IyY2U4ODRmNTZiOWYiLCJlbWFpbCI6Ikphbm5lQGRvZS5jb20iLCJpYXQiOjE2MzQyMjY2MzcsImV4cCI6MTYzNDMxMzAzN30.vV45emBgDBz5z8ykejmC2D1jOrsodzacHq5oe2ol3wc
+
+
+GET  {{remoteUrl}}/users
+
+
+###
+GET   {{remoteUrl}}/notes
+
+###
+GET  {{localUrl}}/orders
+
+###
+POST  {{localUrl}}/orders
+Content-Type: application/json
+
+{"service": "stadning","stugID": "1234", "Date": "2022-01-01"}
+
+###
+PUT {{localUrl}}/orders
+Content-Type: application/json
+
+
+###
+GET  https://limitless-atoll-37666.herokuapp.com/cabins/owned
+Content-Type: application/json
+Authorization: Bearer {{token}}
