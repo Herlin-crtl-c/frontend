@@ -3,7 +3,6 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const fetch = require('electron-fetch').default
 
-
 function createWindow () {
     const win = new BrowserWindow({
       width: 800,
@@ -20,31 +19,9 @@ function createWindow () {
     
   }
   
-  ipcMain.handle('btn-handler', async(event, data) => {
-    try{
-          const options = {      
-          method: "POST",
-                headers:{
-            "Content-type":"application/json"
-          },
-          body:JSON.stringify({
-            "email": "Janne@doe.com",
-            "password": "Password1234"
-            
-          }),
-          
-        }
-        const response = await fetch ('https://limitless-atoll-37666.herokuapp.com/users/login',options)
-        const data = await response.json()
-        console.log(data.JSON.stringify)
-        
-    }catch(error){console.log("atte e en fet hora!! (ERROR)",error.message)}
-        
-  })
-
   ipcMain.handle('get-cabins-handler', async(event, data) => {
     try{
-      console.log("cabins-handler")
+      
       const resp = await fetch('https://limitless-atoll-37666.herokuapp.com/cabins/owned', {
     
       headers: {'Authorization': 'Bearer ' + process.env.JWT },
@@ -54,16 +31,43 @@ function createWindow () {
     
     return cabins
   }catch(error){
-      console.log("atte e en fet hora!! (ERROR)")
+      console.log(error.message)
     }
     
+})
+ipcMain.handle('get-orders-handler', async(event, data) => {
+  try{
+ 
+    const response = await fetch('https://secret-shelf-13108.herokuapp.com/orders', {
+  
+    headers: {'Authorization': 'Bearer ' + process.env.JWT}, 
+    timeout: 6000 })
     
+    orders = await response.json()
+    console.log(orders)
+    return orders
+  }catch(error){
+    console.log(error.message)
+  }
+  
+})
+ipcMain.handle('get-services-handler', async(event, data) => {
+  try{
     
+    const response = await fetch('https://secret-shelf-13108.herokuapp.com/services', {
+  
+    headers: {'Authorization': 'Bearer ' + process.env.JWT}, 
+    timeout: 6000 })
+    
+  services = await response.json()
+  console.log(services)
+  return services
+}catch(error){
+    console.log(error.message)
+  }
+  
 })
   
-  
-
-
   app.on('ready' ,createWindow)
   
 

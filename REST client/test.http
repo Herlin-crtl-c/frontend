@@ -12,10 +12,10 @@ GET  {{remoteUrl}}/users
 GET   {{remoteUrl}}/notes
 
 ###
-GET  {{localUrl}}/orders
+GET  {{remoteUrl}}/services
 
 ###
-POST  {{localUrl}}/orders
+POST  {{remoteUrl}}/orders
 Content-Type: application/json
 
 {"service": "stadning","stugID": "1234", "Date": "2022-01-01"}

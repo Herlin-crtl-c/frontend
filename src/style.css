@@ -58,3 +58,15 @@ body{
     border-radius: 15px;
     padding: 5px;
 }
+#orders div {
+    border: 2px salmon solid;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 5px;
+}
+#services div {
+    border: 2px salmon solid;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 5px;
+}

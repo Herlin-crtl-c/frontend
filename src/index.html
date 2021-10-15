@@ -8,27 +8,34 @@
     <title>Mökkihöperöt OY</title>
 </head>
 <body>
-    <div id="center">
-        <div>
-            <h1 id="underline">Mökkihöperöt OY</h1>
+    <div >
+        <div id="center2">
+            <h1 id="underline2">Mökkihöperöt OY - Beställ Tjänst</h1>
         </div>
-        <div id="border">
-        <div id="center2" >   
-            <form id="form" method="post">
-                <label for="name">Email:</label>
-                <input type="email" id="name" name="username" required
-                minlength="4" maxlength="10" size="10">
-               
-        </div> <div id="center2"> 
-                <label for="name">Password:</label>
-                <input type="password" id="name" name="username" required
-                minlength="4" size="10">
-                <button type="button" id="btn" value="Login">Login</button> 
-            </form>
-        </div>     
-        <div id="cabins"></div>
+        <div id="area">
+                
+            <h2>välj stuga</h2>
+            <div id="cabins"></div>
+            <h2>välj tjänst</h2>
+            <ul>
+                <div id="services"></div>
+            </ul>
+            <h2>Datum</h2>
+            <input type="date" name="datum" id="date">
+            <button type="submit">OK</button>
         
-    </div></div>
+    </div>
+    <div>
+            <div id="area2">
+                    <h2>beställda Tjänster</h2>
+                    <ul>
+                        <div id="orders"></div>
+                    </ul>
+                    <button type="submit">Ändra</button>
+                    <button type="submit">Radera</button>
+            </div>
+    </div>
     <script src="./renderer.js"></script>
+</div>
 </body>
 </html>
